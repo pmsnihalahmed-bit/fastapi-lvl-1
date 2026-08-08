@@ -24,4 +24,4 @@ jobs:
           ssh -i ~/.ssh/deploy_key \
             -o StrictHostKeyChecking=no \
             "$EC2_USER@$EC2_HOST" \
-            "whoami"
+            "~/deploy.sh"
