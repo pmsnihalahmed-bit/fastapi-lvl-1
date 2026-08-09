@@ -6,7 +6,18 @@ on:
       - main
 
 jobs:
-  test-ssh:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        used: actions/checkout@v4
+
+      - name: Check Python syntax
+        run: python -m compileall .
+
+  deploy:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
