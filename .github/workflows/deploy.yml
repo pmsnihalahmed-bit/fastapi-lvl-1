@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        used: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Check Python syntax
         run: python -m compileall .
